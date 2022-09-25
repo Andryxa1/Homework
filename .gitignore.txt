@@ -1,4 +1,0 @@
-log/
-cache/
-.vscode
-/lessons
