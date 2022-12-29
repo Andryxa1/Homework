@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="static/assets/css/slick.css">
     <link rel="stylesheet" href="static/assets/css/nice-select.css">
     <link rel="stylesheet" href="static/assets/css/style.css">
+    <link rel="stylesheet" href="./courses.css">
 </head>
 <body class="black-bg">
     <!-- ? Preloader Start -->
@@ -98,12 +99,28 @@
     <!--? Team -->
     <section class="team-area fix section-padding30">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-xl-12">
                     <div class="section-tittle text-center mb-55">
-                        <h2>What I Offer</h2>
+                        <h2>What we Offer</h2>
                     </div>
                 </div>
+                <ul id="navigation" style="display:flex; flex-wrap:wrap; margin: auto; margin-bottom:90px; width: 90%; align-items: center; justify-content: space-between;">
+                    {% for item in courses %}
+                        <li style="margin-bottom:15px; outline: 1px solid white; padding: 22px; width: 47%">
+                            <a href="{{ item.ID }}" class="train_header" 
+                            style="
+                                text-decoration: none;
+                                color: #FF0000;
+                                font-size: 19px;
+                                font-weight: 500;
+                                font-family: 'Oswald', sans-serif;
+                            ">{{ item.Name }}</a>
+                            <p class="train_description" style="color: white; font-size: 16px; margin-bottom:0; margin-top: 9px;font-family: 'Roboto Condensed', sans-serif; line-height:1; font-weight:200">{{ item.Description }} </p>
+                        
+                        </li>
+                    {% endfor %}
+                    </ul>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
@@ -204,8 +221,8 @@
                         </div>
                         <div class="features-caption">
                             <h3>Phone</h3>
-                            <p>(90) 277 278 2566</p>
-                            <p>  (78) 267 256 2578</p>
+                            <p>(096) 601 43 22</p>
+                            <p>  (096) 083 26 09</p>
                         </div>
                     </div>
                 </div>
@@ -216,8 +233,8 @@
                         </div>
                         <div class="features-caption">
                             <h3>Email</h3>
-                            <p>jacson767@gmail.com</p>
-                            <p>contact56@zacsion.com</p>
+                            <p>denisderivedmed7@gmail.com</p>
+                            <p>andreyboiko2006@gmail.com</p>
                         </div>
                     </div>
                 </div>
