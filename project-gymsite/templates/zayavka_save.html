@@ -45,7 +45,7 @@
                 <div class="container-fluid">
                     <div class="menu-wrapper d-flex align-items-center justify-content-between">
                         <!-- Logo -->
-                        <div class="logo">static/
+                        <div class="logo">
                             <a href="index.html"><img src="static/assets/img/logo/logo.png" alt=""></a>
                         </div>
                         <!-- Main-menu -->
@@ -83,15 +83,11 @@
 
 
 <main>
+   
 </main>    
 <footer>
 
-    <p>
-        Вітаємо, {{ client }}
-    </p>
-    <p>
-        Ваша заявка прийнята
-    </p>
+ 
     
 
     <!--? Footer Start-->
@@ -99,44 +95,39 @@
         <div class="container">
             <div class="footer-top footer-padding">
                 <!-- Footer Menu -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="single-footer-caption mb-50 text-center">
-                            <!-- logo -->
-                            <div class="footer-logo wow fadeInUstatic/p" data-wow-duration="1s" data-wow-delay=".2s">
-                                <a href="index.html"><img src="static/assets/img/logo/logo2_footer.png" alt=""></a>
-                            </div>
-                            <!-- Menu -->
-                            <!-- Header Start -->
-                            <div class="header-area main-header2 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
-                                <div class="main-header main-header2">
-                                    <div class="menu-wrapper menu-wrapper2">
-                                        <!-- Main-menu -->
-                                        <div class="main-menu main-menu2 text-center">
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="about">Home</a></li>
-                                                    <li><a href="about.html">About</a></li>
-                                                    <li><a href="courses.html">Courses</a></li>
-                                                    <li><a href="pricing.html">Pricing</a></li>
-                                                    <li><a href="gallery.html">Gallery</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>   
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Header End -->
-                            <!-- social -->
-                            <div class="footer-social mt-30 wow fadeInUp" data-wow-duration="3s" data-wow-delay=".8s">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="congrats_wrapper">
+                    <p class="congrats">
+                        Вітаємо, {{ client }}!
+                    </p>
+                    <p class="congrats_text">
+                        Ваша заявка прийнята
+                    </p>
+                    <style>
+                        .congrats, .congrats_text {
+                            text-align: center;
+                            color: white;
+                            margin: 0;
+                        }
+                        .congrats {
+                            text-transform: capitalize;
+                        }
+                        .congrats_wrapper {
+                            padding: 20px;
+                            margin: 60px auto;
+                            width: 60%;
+                            font-size: 20px;
+                            border-top: 1px solid rgba(255, 255, 255, 0.529);
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.529);
+                        }
+                        .footer-bottom {
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    </style>
                 </div>
+
             </div>
             <!-- Footer Bottom -->
             <div class="footer-bottom">
