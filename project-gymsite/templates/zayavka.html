@@ -93,23 +93,59 @@
     
     </p>
 
-    <form method="post" action="save-contact">
-        <input style="width: 400px; padding: 10px" type="text" name="client_name" placeholder="Name"/>
-        <br/>
-        <input style="width: 400px; padding: 10px" type="text" name="client_lastname" placeholder="Last Name"/>
-        <br/>
-        <input style="width: 400px; padding: 10px" type="text" name="phone" placeholder="Phone"/>
-        <br/>
+    <form method="post" action="save-contact" class="form">
+        <style>.form input {
+            display: block; margin: auto;
+            background-color: #ff1313;
+            border: 0;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .form input:active, .form input:focus {
+            background-color: #ff1313;
+            outline: 1px solid white;
+            border: 0;
+        }
+        .form {
+            margin: 60px auto;
+            width: 400px;
+        }
+        .form input::placeholder{
+            color: white;
+        }
+        .form input[type="submit"]:hover {
+            background-color: #ffffff;
+            color: #ff1313;
+        }
+        .form .nice-select{
+           background-color: #ff1313;
+           border-color: #ffffff;
+           color: #ffffff;
+        }
+        .form .list {
+            background-color: #ff1313;
+        }
+        .form .nice-select .option:hover {
+            color: #ff1313;
+        }
+        </style>
+        <input style="width: 400px; padding: 10px" type="text" name="client_name" placeholder="Ім’я"/>
+        <input style="width: 400px; padding: 10px" type="text" name="client_lastname" placeholder="Прізвіще"/>
+        <input style="width: 400px; padding: 10px" type="text" name="phone" placeholder="Номер Телефону"/>
+   
         <select name="abonement">
 
             {% for item in abonements %}
             <option value={{ item.ID }}>{{ item.Name }}</option>
             {% endfor %}
-
         </select>
-        <br/>
-
-        <input type="submit" value="Відправити заявку"/> 
+        <input type="submit" value="Відправити заявку" style="    
+                padding: 12px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 13px;
+                margin: 0 0 0 auto;
+                transition: 300ms;"/> 
     </form>
 
     <!--? Footer Start-->
@@ -120,31 +156,8 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="single-footer-caption mb-50 text-center">
-                            <!-- logo -->
-                            <div class="footer-logo wow fadeInUstatic/p" data-wow-duration="1s" data-wow-delay=".2s">
-                                <a href="index.html"><img src="static/assets/img/logo/logo2_footer.png" alt=""></a>
-                            </div>
-                            <!-- Menu -->
                             <!-- Header Start -->
-                            <div class="header-area main-header2 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
-                                <div class="main-header main-header2">
-                                    <div class="menu-wrapper menu-wrapper2">
-                                        <!-- Main-menu -->
-                                        <div class="main-menu main-menu2 text-center">
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="about">Home</a></li>
-                                                    <li><a href="about.html">About</a></li>
-                                                    <li><a href="courses.html">Courses</a></li>
-                                                    <li><a href="pricing.html">Pricing</a></li>
-                                                    <li><a href="gallery.html">Gallery</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>   
-                                    </div>
-                                </div>
-                            </div>
+                 
                             <!-- Header End -->
                             <!-- social -->
                             <div class="footer-social mt-30 wow fadeInUp" data-wow-duration="3s" data-wow-delay=".8s">
