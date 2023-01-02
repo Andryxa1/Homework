@@ -88,46 +88,54 @@
 
     <p>
         <section class="services-area">
-            <h2>Заявка на абонемент</h2>
+       
         </section>
     
     </p>
-
+    <h2 class="zayavka_header">Заявка на абонемент</h2>
     <form method="post" action="save-contact" class="form">
-        <style>.form input {
-            display: block; margin: auto;
+        <style>
+            .zayavka_header {
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 35px;
+                margin-top: 40px;
+            }
+            .form input {
+                display: block; margin: auto;
+                background-color: #ff1313;
+                border: 0;
+                color: white;
+                margin-bottom: 10px;
+            }
+            .form input:active, .form input:focus {
+                background-color: #ff1313;
+                outline: 1px solid white;
+                border: 0;
+            }
+            .form {
+                margin: 60px auto;
+                width: 400px;
+            }
+            .form input::placeholder{
+                color: white;
+            }
+            .form input[type="submit"]:hover {
+                background-color: #ffffff;
+                color: #ff1313;
+            }
+            .form .nice-select{
             background-color: #ff1313;
-            border: 0;
-            color: white;
-            margin-bottom: 10px;
-        }
-        .form input:active, .form input:focus {
-            background-color: #ff1313;
-            outline: 1px solid white;
-            border: 0;
-        }
-        .form {
-            margin: 60px auto;
-            width: 400px;
-        }
-        .form input::placeholder{
-            color: white;
-        }
-        .form input[type="submit"]:hover {
-            background-color: #ffffff;
-            color: #ff1313;
-        }
-        .form .nice-select{
-           background-color: #ff1313;
-           border-color: #ffffff;
-           color: #ffffff;
-        }
-        .form .list {
-            background-color: #ff1313;
-        }
-        .form .nice-select .option:hover {
-            color: #ff1313;
-        }
+            border-color: #ffffff;
+            color: #ffffff;
+            }
+            .form .list {
+                background-color: #ff1313;
+            }
+            .form .nice-select .option:hover {
+                color: #ff1313;
+            }
         </style>
         <input style="width: 400px; padding: 10px" type="text" name="client_name" placeholder="Ім’я"/>
         <input style="width: 400px; padding: 10px" type="text" name="client_lastname" placeholder="Прізвіще"/>
