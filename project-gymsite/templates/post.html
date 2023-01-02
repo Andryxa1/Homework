@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if post %}
+        <h2>{% block title %} {{ post['title'] }} {% endblock %}</h2>
+        <span class="badge badge-primary">{{ post['created'] }}</span>
+        <p>{{ post['content'] }}</p>
+    {% else %}
+        <h2>стаття з ідентифікаторм ' -- {{ post_id }} -- ' не знайдена</h2>
+    {% endif %}
+
+{% endblock %}
